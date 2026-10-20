@@ -39,5 +39,11 @@ models:
   DBT_BIGDATA:
     staging:
       +materialized: view
+      +schema: silver
+    
     intermediate:
       +materialized: view
+
+    marts:
+      +materialized: table
+      +schema: gold
